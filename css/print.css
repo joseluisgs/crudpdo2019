@@ -1,0 +1,30 @@
+@media print {
+    header,
+    footer,
+    nav,
+    aside {
+        display: none;
+    }
+    body {
+        background-image: none;
+    }
+    a[href]:after {
+        content: none !important;
+    }
+    a[href^=http]:after {
+        content: " <" attr(href) ">";
+        content: none !important;
+    }
+    ul,
+    img,
+    table {
+        page-break-inside: avoid;
+    }
+    /* Para no imprimir */
+    #no_imprimir {
+        display: none;
+    }
+    #parte2 {
+        display: none;
+    }
+}
